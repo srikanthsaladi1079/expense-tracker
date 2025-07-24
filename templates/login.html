@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login |💰 Expense Tracker</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap-5.3.0-dist/css/bootstrap.min.css')}}">
+    <style>
+      body {
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: black;
+      }
+      .form-box {
+        max-width: 400px;
+        margin: 80px auto;
+        padding: 30px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+    </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-dark bg-dark px-3">
+    <span class="navbar-brand">💰 Expense Tracker -🔑 Login</span>
+    <div class="d-flex">
+      <a href="/" class="btn btn-outline-light me-2">🏡 Home</a>
+      <a href="/register" class="btn btn-outline-light">📝 Register</a>
+    </div>
+  </nav>
+    
+    <div class="form-box">
+      <h3 class="text-center mb-4">Login</h3>
+      <form method="POST" action="/login">
+        <div class="mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Enter registered email address" required>
+        </div>
+        <div class="mb-3">
+          <input type="password" name="password" class="form-control" placeholder="Enter your Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+      </form>
+      <div class="text-center mt-3">
+        <a href="/forgot_password">Forgot Password?</a>
+      </div>
+      <div class="text-center mt-3">
+        <a href="/register">Don,t have an Account? Register Here</a>
+      </div>
+    </div>
+  </body>
+</html>

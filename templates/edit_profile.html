@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{url_for('static',filename='bootstrap-5.3.0-dist/css/bootstrap.min.css')}}">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding: 30px;
+    }
+    .form-box {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">💰 Expense Tracker - Edit Profile</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="{{url_for('profile')}}">Back to Profile</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+      <div class="form-box">
+          <h2>Edit Profile</h2>
+          <form method="POST">
+             <div class="mb-3">
+                 <label class="form-label">New Name</label>
+                 <input type="text" name="name" class="form-control" placeholder="Update your name">
+             </div>
+             <div class="mb-3">
+                 <label class="form-label">New Email</label>
+                 <input type="email" name="email" class="form-control" placeholder="Update your email">
+             </div>
+             <button type="submit" class="btn btn-primary">Update Profile</button>
+          </form>
+      </div>
+  </div>
+</body>
+</html>

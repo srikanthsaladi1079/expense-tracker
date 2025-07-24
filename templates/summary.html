@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Summary |💰 Expense Tracker</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='bootstrap-5.3.0-dist/css/bootstrap.min.css')}}">
+  <style>
+    body {
+        background: linear-gradient(to right, #283c86, #45a247);
+        color: white;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark px-3">
+      <span class="navbar-brand">💰 Expense Tracker -📊 Summary</span>
+      <div class="d-flex">            
+          <a href="/view_expenses" class="btn btn-outline-light me-2">🔍 View Expenses</a>
+          <a href="/dashboard" class="btn btn-outline-light me-2">🗒️ Dashboard</a>
+          <a href="/tools" class="btn btn-outline-light me-2">🔧Tools</a>
+          <a href="/logout" class="btn btn-outline-light">🚶‍♀️ Logout</a>
+      </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="card p-4 shadow">
+        <h4 class="mb-3">Monthly Summary</h4>
+
+        <p><strong>Total Spent:</strong> Rs.{{ total_spent }}</p>
+        <p><strong>Top Category</strong> {{ top_category }}</p>
+
+        <hr>
+        <h5>Breakdown by Category</h5>
+        <ul class="list-group">
+            {% for cat, amt in category_totals.items() %}
+                <li class="list-group-item d-flex justify-content-between">
+                    <span> {{ cat }}</span>
+                    <span> Rs.{{ amt }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+</body>
+</html>

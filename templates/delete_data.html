@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Delete Data | Expense Tracker</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap-5.3.0-dist/css/bootstrap.min.css')}}">
+    <style>
+      body {
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: black;
+      }
+      .form-box {
+        max-width: 400px;
+        margin: 80px auto;
+        padding: 30px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+    </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-dark bg-dark px-3">
+        <span class="navbar-brand">💰 Expense Tracker -🗑️ Delete Data</span>
+        <div class="d-flex">  
+            <a href="/view_expenses" class="btn btn-outline-light me-2">🔍 View Expenses</a>          
+            <a href="/dashboard" class="btn btn-outline-light me-2">🗒️ Dashboard</a>
+            <a href="/logout" class="btn btn-outline-light">🚶‍♀️ Logout</a>
+        </div>
+  </nav>
+
+
+    <div class="form-box">
+      <h3 class="text-center mb-4">Delete Data</h3>
+      <form method="POST" action="/delete_data">
+        <div class="mb-3">
+          <input type="password" name="password" class="form-control" placeholder="Enter your password" required>
+        </div>
+        <div class="mb-3">
+          <input type="password" name="confirm_password" class="form-control" placeholder="Confirm your password" required>
+        </div>
+        <div class="mb-3">
+          <input type="date" name="start_date" class="form-control" placeholder="Enter Start date" required>
+        </div>
+        <div class="mb-3">
+          <input type="date" name="end_date" class="form-control" placeholder="Enter End Date" required>
+        </div>
+        <button type="submit" class="btn btn-danger w-100">Delete Data</button>
+      </form>
+    </div>
+  </body>
+</html>
+

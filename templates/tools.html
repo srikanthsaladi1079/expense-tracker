@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tools | Expense Tracker</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap-5.3.0-dist/css/bootstrap.min.css')}}">
+    <style>
+      body {
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: black;
+      }
+      h2 {
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark px-3">
+        <span class="navbar-brand">💰 Expense Tracker -🔧Tools</span>
+        <div class="d-flex">            
+            <a href="/view_expenses" class="btn btn-outline-light me-2">🔍 View Expenses</a>
+            <a href="/dashboard" class="btn btn-outline-light me-2">🗒️ Dashboard</a>
+            <a href="/logout" class="btn btn-outline-light">🚶‍♀️ Logout</a>
+        </div>
+    </nav>
+      
+
+    <div class="container mt-5">
+        <h2 class="mb-4 text-center">Tools</h2>
+
+          <!--Download CSV-->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Download Your Expenses</h5>
+                <p class="card-text">Get a CSV file of all your expenses</p>
+                <a href="/download_csv" class="btn btn-primary">Download CSV</a>
+            </div>
+        </div>
+
+        <!--Download PDF-->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Download Your Expenses</h5>
+                <p class="card-text">Get a PDF file of all your expenses</p>
+                <a href="/download_pdf" class="btn btn-primary">Download PDF</a>
+            </div>
+        </div>
+
+        <!--Pie-Chart-->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Pie-Chart</h5>
+                <p class="card-text">Get a visual Pie-chart of all your expenses</p>
+                <a href="/pie_chart" class="btn btn-primary">View Pie-Chart</a>
+            </div>
+        </div>
+
+        <!--Bar-Graph-->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Bar-Graph</h5>
+                <p class="card-text">Get a bar graph of all your expenses</p>
+                <a href="/bar_graph" class="btn btn-primary">View Bar Graph</a>
+            </div>
+        </div>
+
+          
+
+        <!--Delete All Expenses-->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title text-danger">Delete All Expenses</h5>
+                <p class="card-text">This will remove all your expenses</p>
+                <a href="/delete_data" class="btn btn-outline-danger">Delete Data</a>
+            </div>
+        </div>
+
+        <!--Delete Account-->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title text-danger">Delete My Account</h5>
+                <p class="card-text">This will delete your account and all associated data.</p>
+                <a href="/delete_account" class="btn btn-outline-danger">Delete Account</a>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

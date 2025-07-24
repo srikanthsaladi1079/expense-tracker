@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile |💰 Expense Tracker</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='bootstrap-5.3.0-dist/css/bootstrap.min.css')}}">
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      min-height: 100vh;
+    }
+    .navbar {
+      background-color: #111;
+    }
+    .dashboard-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 10px #000;
+    }
+    .dashboard-box h2 {
+      margin-bottom: 30px;
+    }
+    .dashboard-btn {
+      margin: 10px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark px-3">
+        <span class="navbar-brand">💰 Expense Tracker -🗒️ Profile</span>
+        <div class="d-flex">            
+            <a href="/profile" class="btn btn-outline-light me-2">⚙️ Update Profile</a>
+            <a href="/summary" class="btn btn-outline-light me-2">📊 Summary</a>
+           <a href="/logout" class="btn btn-outline-light">🚶‍♀️ Logout</a>
+        </div>
+  </nav>
+
+  <div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+      <div class="dashboard-box">
+          <h2>Welcome, {{ user.name }}!</h2>
+          <a href="/add_expense" class="btn btn-success dashboard-btn">➕ Add Expenses</a><br>
+          <a href="/view_expenses" class="btn btn-info dashboard-btn">🗒️ View Expenses</a><br>
+          <a href="/tools" class="btn btn-warning dashboard-btn">🧰 Tools</a><br>  
+      </div>
+  </div>
+</body>
+</html>
