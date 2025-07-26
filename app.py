@@ -18,13 +18,11 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
-
 #Initialize app and cofigure
 app = Flask(__name__)
 app.secret_key = "expense-tracker-key"
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///expenses.db'
 db.init_app(app)    
-
 
 #Home page
 @app.route('/')
@@ -61,8 +59,6 @@ def register():
         return redirect(url_for("login"))
     
     return render_template("register.html")
-
-
 
 #Login Route  
 @app.route('/login',methods=["GET","POST"])
@@ -217,7 +213,6 @@ def profile():
     
     return render_template('profile.html', user=user)
 
-
 #Dashboard route 
 @app.route('/dashboard')
 def dashboard():
@@ -252,7 +247,6 @@ def add_expense():
         return redirect(url_for('view_expenses'))
 
     return render_template('add_expense.html')
-
 
 #view expenses 
 @app.route('/view_expenses')
@@ -307,8 +301,6 @@ def edit_profile():
         pass
     return render_template("edit_profile.html")
 
-
-
 #tools 
 @app.route('/tools')
 def tools():
@@ -354,8 +346,7 @@ def summary():
     
     return render_template("summary.html", total_spent=total_spent, top_category=top_category,category_totals=category_totals)
 
-
-#run
+#Run the App
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()

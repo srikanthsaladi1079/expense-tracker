@@ -100,6 +100,7 @@ source venv/bin/activate # On Linux/macOS
 - Google OAuth Login
 - Mobile Responsive Enhancements
 - Email Based password reset
+- Flash Messages when there's error and successful login or retreival
 
 🧑‍💻 Author
 

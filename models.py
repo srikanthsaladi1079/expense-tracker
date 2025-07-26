@@ -4,6 +4,7 @@ from datetime import datetime,timezone
 
 db = SQLAlchemy()
 
+#Create Models(Tables)
 class User(db.Model):
     id = db.Column(db.Integer,primary_key=True)
     name = db.Column(db.String(50),nullable=False)
