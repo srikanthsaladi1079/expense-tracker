@@ -90,6 +90,11 @@ source venv/bin/activate # On Linux/macOS
 
 **App will be live at http://127.0.0.1:5000
 
+---
+
+📷 Screenshots
+
+🔗 Inside images folder of this repo
 
 📦 Future Improvements
 
